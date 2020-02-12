@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: yellow-design;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Meticula;
+  width: 100%;
+  word-wrap: break-word;
+}
+@font-face {
+  font-family: Meticula;
+  src: url('./fonts/Meticula.ttf')
+}
