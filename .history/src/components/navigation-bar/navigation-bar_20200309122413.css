@@ -1,0 +1,48 @@
+
+.nav{
+    font-family: Meticula;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color:  rgb(27, 36, 47);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    font-size: min(2vw, 18px);
+  }
+  
+.ul{
+    display: flex;
+    margin: 0px;
+    height: 40px;
+    color: white;
+  }
+.ul li{
+    list-style: none;
+    line-height: 40px;
+    font-weight: bold;
+    height: 40px;
+  }
+.ul li span{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 15px;
+  }
+  
+.ul :hover{
+    transition: 0.3s;
+    color:  rgb(227,27,109);
+  }
+  
+.ul :focus{
+        transition: 0.3s;
+        color:  rgb(227,27,109);
+  }
+
+  .li-active{
+    color: rgb(227,27,109);
+  }
+  

@@ -4,10 +4,12 @@ import { Introduction } from '../introduction/introduction';
 import { About } from '../about/about';
 import { NavigationBar } from '../navigation-bar/navigation-bar';
 import { Projects } from '../projects/projects';
-
+import { Cv } from '../cv/cv';
+import { ToastComponent } from '../../toast/toast';
 interface State{
   scrollPosition?: number;
-  activeMenuItem?: number
+  activeMenuItem?: number;
+  cvActive?: boolean;
 }
 interface Props{
 }
@@ -17,7 +19,8 @@ class App extends Component<Props, State>{
       super(props);
       this.state = {
         scrollPosition: this.wrapperRef.current?.scrollTop,
-        activeMenuItem: 1
+        activeMenuItem: 1,
+        cvActive: false
     }
   }
   section1 =  createRef<HTMLDivElement>();
@@ -29,7 +32,8 @@ class App extends Component<Props, State>{
     this.dumyForSecondSection.current?.scrollIntoView({ behavior: 'smooth' });
   }
 componentDidMount(){
-  window.addEventListener("scroll", this.handleScroll)
+  window.addEventListener("scroll", this.handleScroll);
+  document.addEventListener("keydown", this.handleKeyPress, false);
 }
 handleScroll = (event: any) => {
   const scrollPos = window.pageYOffset;
@@ -61,29 +65,45 @@ handleScrollToSection = (sectionNum: number) => {
       break;
   }
 }
+handleKeyPress = (event: any) => {
+  if(event.keyCode === 80){
+    this.setState({cvActive : !this.state.cvActive})
+  }
+}
+
+componentWillUnmount(){
+  document.removeEventListener("keydown", this.handleKeyPress, false);
+}
   
   render()
   //solve overflow problem
   {
-  return (
-    <div className="App">
-  <section className="section parallax bg1" id="section1" ref={this.section1}>
-  <Introduction scrollPosition={this.state.scrollPosition}
-    onClick={() => this.handleClick() }
-    />
-  </section>
-  <div>
-  <div ref={this.dumyForSecondSection}></div>
-    <NavigationBar handleScrollToSection={this.handleScrollToSection} activeMenuItem={this.state.activeMenuItem!}/>
-  <section className="section static" ref={this.section2} id="sec2">
-    <About />
-  </section>
-  <section className="section parallax bg2" ref={this.section3}>
-    <Projects />
-  </section>
-</div>
-</div>
-  );
+    if(this.state.cvActive) {
+      return(
+        <Cv />
+      )
+    } else {
+      return (
+        <div className="App" onKeyPress={this.handleKeyPress}>
+      <section className="section parallax bg1" id="section1" ref={this.section1}>
+        <ToastComponent />
+      <Introduction scrollPosition={this.state.scrollPosition}
+        onClick={() => this.handleClick() }
+        />
+      </section>
+      <div>
+      <div ref={this.dumyForSecondSection}></div>
+        <NavigationBar handleScrollToSection={this.handleScrollToSection} activeMenuItem={this.state.activeMenuItem!}/>
+      <section className="section static" ref={this.section2} id="sec2">
+        <About />
+      </section>
+      <section className="section parallax bg2" ref={this.section3} id="sec3">
+        <Projects />
+      </section>
+    </div>
+    </div>
+      ); 
+    }
   }
 }
 

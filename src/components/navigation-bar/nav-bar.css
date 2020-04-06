@@ -95,7 +95,7 @@ and (min-width : 150px) and (max-width : 350px) {
 .fixed-nav{
     padding: 0 100px;
 }
-nav  span{
+nav span{
     font-size: 12px;
 }
 }
