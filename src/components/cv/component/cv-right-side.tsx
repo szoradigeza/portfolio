@@ -17,14 +17,15 @@ export class CvRightSide extends Component{
     <div className="line"></div>
     <div className="first-experience">
         <div className="duration"> 2011 -
-            <br></br>2016</div>
+            <br></br>2016
+        </div>
         <div className="education-name">
             <a>Network installer, Secondary Technical School of Informatic</a>
         </div>
     </div>
     <div className="education">
         <div className="duration"> 2016 -
-            <br></br>
+            <br></br> 2020
         </div>
         <div className="education-name">
             Bachelor of Computer Science, University of Pannonia
