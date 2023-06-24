@@ -7,7 +7,7 @@ export class CvRightSide extends Component{
     render() {
         return(
             <div>
-                <div className="name-container"> <p className="name"> Szórádi Géza </p>
+                <div className="name-container"> <p className="name"> Géza Szórádi </p>
                     <p className="web-developer">Web developer</p>
                  </div>
 <div className="experience-container">
