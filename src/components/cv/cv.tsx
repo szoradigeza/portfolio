@@ -33,8 +33,7 @@ export class Cv extends Component{
                     <h5> <img id="icons" src={about} alt="about-icon"></img> About me</h5>
                 </div>
                 <div id="about-me">
-                    <p>I'm a 24 years old enthusiastic developer. I am working currently in Continental corporation . Next to the Continental's project works I do home made projects and
- I love learning new things. I like building new stuff and working with other people.</p>
+                    <p>I'm a 27 years old enthusiastic and passionate developer. I have a comprehensive understanding of designing, implementing, and maintaining robust and scalable applications, especially on the frontend side. My commitment to continuous learning and adaptability enables me to stay up-to-date with the latest industry trends and deliver cutting-edge software solutions. </p>
                 </div>
                 <div id="left-title">
                     <h5> <img id="icons" src={contactIcon} alt="contact-icon"></img> Contacts</h5>
@@ -63,7 +62,7 @@ export class Cv extends Component{
                     <div id="Home">
                         <a id="contact-name"><img className="contact-icon" src={homeIcon} alt="home-icon"></img>
                         </a>
-                        <a id="contact-data">Veszprem, Hungary</a>
+                        <a id="contact-data">Celldömölk, Hungary</a>
                     </div>
                 </div>
                 <div id="left-title">
@@ -71,49 +70,50 @@ export class Cv extends Component{
                 </div>
                 <div id="skills">
                     <div className="skill-type">
-                        <p>Front - end</p>
+                        <p>Frontend</p>
                     </div>
                     <ul>
+                       <li className="skill-name">React</li>
+                        <div id="progress-bar">
+                            <LinearProgress variant="determinate" value={100}/>
+                        </div>
+                                         <li className="skill-name">Javascript</li>
+                        <div id="progress-bar">
+                            <LinearProgress variant="determinate" value={100}/>
+                        </div>
+                                         <li className="skill-name">Typescript</li>
+                        <div id="progress-bar">
+                            <LinearProgress variant="determinate" value={100}/>
+                        </div>
                         <li className="skill-name">HTML</li>
                         <div id="progress-bar">
-                            <LinearProgress variant="determinate" value={90} />
+                            <LinearProgress variant="determinate" value={100} />
                         </div>
-                        <li className="skill-name">CSS/CSS3/SASS</li>
+                        <li className="skill-name">CSS/CSS3</li>
                         <div id="progress-bar">
                             <LinearProgress variant="determinate" value={70} />
-                        </div>
-                        <li className="skill-name">Angular</li>
-                        <div id="progress-bar">
-                            <LinearProgress variant="determinate" value={70} />
-                        </div>
-                        <li className="skill-name">React</li>
-                        <div id="progress-bar">
-                            <LinearProgress variant="determinate" value={50}/>
                         </div>
                     </ul>
                     <div className="skill-type">
-                        <p>Back - end</p>
+                        <p>Backend</p>
                     </div>
                     <ul>
-                        <li className="skill-name">Typescript</li>
+                        <li className="skill-name">Express</li>
                         <div id="progress-bar">
                             <LinearProgress variant="determinate" value={80}/>
                         </div>
-                        <li className="skill-name">NodeJS</li>
-                        <div id="progress-bar">
-                            <LinearProgress variant="determinate" value={60}/>
-                        </div>
-                        <li className="skill-name">Python</li>
+                        <li className="skill-name">Python flask</li>
                         <div id="progress-bar">
                             <LinearProgress variant="determinate" value={80}/>
                         </div>
                     </ul>
                     <div className="skill-type">
-                        <p>Other</p>
+                        <p>Other skills</p>
                         </div>
                         <ul>
-                            <li className="other-skill-name">English B2 language exam</li>
-                            <li className="other-skill-name">B category drive license</li>
+                           <li className="other-skill-name">E2E and unit testing experience</li>
+                           <li className="other-skill-name">Skills for using Docker</li>
+                             <li className="other-skill-name">AWS cloud components</li>
                         </ul>
                 </div>
             </div>
